@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LH5-NI-OCI">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WeatherVC-->
         <scene sceneID="mDL-q7-XHq">
             <objects>
-                <viewController id="zCD-ah-7Oj" sceneMemberID="viewController">
+                <viewController id="zCD-ah-7Oj" userLabel="WeatherVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VU2-qq-idt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,10 +27,10 @@
             </objects>
             <point key="canvasLocation" x="3299" y="1029"/>
         </scene>
-        <!--View Controller-->
+        <!--ColorsVC-->
         <scene sceneID="NNF-Lq-Tpt">
             <objects>
-                <viewController id="lP2-WR-PNh" sceneMemberID="viewController">
+                <viewController id="lP2-WR-PNh" userLabel="ColorsVC" customClass="ColorsViewController" customModule="ParsingJSONLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NLa-yc-NN9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -43,10 +43,10 @@
             </objects>
             <point key="canvasLocation" x="3299" y="-410"/>
         </scene>
-        <!--View Controller-->
+        <!--UsersVC-->
         <scene sceneID="avf-5i-nk0">
             <objects>
-                <viewController id="upF-lt-J1t" sceneMemberID="viewController">
+                <viewController id="upF-lt-J1t" userLabel="UsersVC" customClass="UsersViewController" customModule="ParsingJSONLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EdW-7y-3DT">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,11 +98,11 @@
             </objects>
             <point key="canvasLocation" x="2503" y="1029"/>
         </scene>
-        <!--Contacts-->
+        <!--Users-->
         <scene sceneID="Daf-a9-oVe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9uz-Sz-vrP" userLabel="Contacts" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="scU-vo-WKc" userLabel="Contacts"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9uz-Sz-vrP" userLabel="Users" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="scU-vo-WKc" userLabel="Users"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8uz-i4-NLb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
