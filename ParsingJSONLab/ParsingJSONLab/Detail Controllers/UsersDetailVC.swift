@@ -1,5 +1,5 @@
 //
-//  UsersViewController.swift
+//  UsersDetailVC.swift
 //  ParsingJSONLab
 //
 //  Created by Sam Roman on 8/27/19.
@@ -8,24 +8,9 @@
 
 import UIKit
 
-class UsersViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    
-    @IBOutlet weak var userTableView: UITableView!
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
-    }
-    
+class UsersDetailVC: UIViewController {
 
     override func viewDidLoad() {
-        userTableView.delegate = self
-        userTableView.dataSource = self
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

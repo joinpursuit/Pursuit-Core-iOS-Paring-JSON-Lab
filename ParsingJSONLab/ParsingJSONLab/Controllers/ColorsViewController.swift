@@ -8,13 +8,54 @@
 
 import UIKit
 
-class ColorsViewController: UIViewController {
+class ColorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var colors = [Colors]() {
+        didSet {
+            colorTableView.reloadData()
+        }
+    }
+    
+    @IBOutlet weak var colorTableView: UITableView!
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
 
     override func viewDidLoad() {
+        colorTableView.delegate = self
+        colorTableView.dataSource = self
+        loadData()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+    
+    private func loadData() {
+        //pathToJSONFile is just the string for the name of the file
+        guard let pathToJSONFile = Bundle.main.path(forResource: "color", ofType: "json") else {
+            fatalError("Could not find bundle")
+        }
+        print(pathToJSONFile)
+        //url is the reference of the location of the json file
+        let url = URL(fileURLWithPath: pathToJSONFile)
+        do {
+            let data = try Data(contentsOf: url)
+            let colorsFromJSON = try Colors.getColors(from: data)
+            colors = colorsFromJSON
+            
+        } catch {
+            fatalError("Could not decode")
+        }
+    }
+    
+    
     
 
     /*
