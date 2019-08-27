@@ -23,7 +23,7 @@ struct AllColors: Codable {
         } catch {
             throw JSONError.decodingError(error)
         }
-}
+    }
 }
 
 struct ColorsInfo: Codable {
