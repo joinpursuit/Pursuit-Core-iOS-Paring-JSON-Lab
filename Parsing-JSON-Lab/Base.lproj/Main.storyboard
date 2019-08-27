@@ -122,10 +122,10 @@
             </objects>
             <point key="canvasLocation" x="2938" y="-183"/>
         </scene>
-        <!--View Controller-->
+        <!--Colors View Controller-->
         <scene sceneID="CYZ-fa-2wd">
             <objects>
-                <viewController id="Fo9-oD-bcn" sceneMemberID="viewController">
+                <viewController id="Fo9-oD-bcn" customClass="ColorsViewController" customModule="Parsing_JSON_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sya-qF-96F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -158,6 +158,9 @@
                         <viewLayoutGuide key="safeArea" id="WZL-iA-Wv5"/>
                     </view>
                     <navigationItem key="navigationItem" id="QsW-iN-As4"/>
+                    <connections>
+                        <outlet property="ColorsViewController" destination="C4T-LW-u4z" id="KTO-rf-9XV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ArS-Ye-eCZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

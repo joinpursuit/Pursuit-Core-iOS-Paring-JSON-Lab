@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ColorsViewController.swift
 //  Parsing-JSON-Lab
 //
 //  Created by Eric Widjaja on 8/27/19.
@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ColorsViewController: UIViewController {
 
+    
+    @IBOutlet weak var ColorsViewController: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
+    
 
+   
 
 }
-

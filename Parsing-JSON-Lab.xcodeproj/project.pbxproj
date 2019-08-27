@@ -8,12 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		DF765CB62315B6C8008849FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CB52315B6C8008849FF /* AppDelegate.swift */; };
-		DF765CB82315B6C8008849FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CB72315B6C8008849FF /* ViewController.swift */; };
 		DF765CBB2315B6C8008849FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF765CB92315B6C8008849FF /* Main.storyboard */; };
 		DF765CBD2315B6C9008849FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF765CBC2315B6C9008849FF /* Assets.xcassets */; };
 		DF765CC02315B6C9008849FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DF765CBE2315B6C9008849FF /* LaunchScreen.storyboard */; };
 		DF765CCB2315B6C9008849FF /* Parsing_JSON_LabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CCA2315B6C9008849FF /* Parsing_JSON_LabTests.swift */; };
 		DF765CD62315B6C9008849FF /* Parsing_JSON_LabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CD52315B6C9008849FF /* Parsing_JSON_LabUITests.swift */; };
+		DF765CEA2315C98A008849FF /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = DF765CE92315C98A008849FF /* colors.json */; };
+		DF765CEC2315CB43008849FF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CEB2315CB43008849FF /* Colors.swift */; };
+		DF765CEE2315DA1C008849FF /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CED2315DA1C008849FF /* ColorsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +38,6 @@
 /* Begin PBXFileReference section */
 		DF765CB22315B6C8008849FF /* Parsing-JSON-Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Parsing-JSON-Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF765CB52315B6C8008849FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DF765CB72315B6C8008849FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DF765CBA2315B6C8008849FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DF765CBC2315B6C9008849FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF765CBF2315B6C9008849FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,9 @@
 		DF765CD12315B6C9008849FF /* Parsing-JSON-LabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Parsing-JSON-LabUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF765CD52315B6C9008849FF /* Parsing_JSON_LabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing_JSON_LabUITests.swift; sourceTree = "<group>"; };
 		DF765CD72315B6C9008849FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF765CE92315C98A008849FF /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
+		DF765CEB2315CB43008849FF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DF765CED2315DA1C008849FF /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +101,11 @@
 		DF765CB42315B6C8008849FF /* Parsing-JSON-Lab */ = {
 			isa = PBXGroup;
 			children = (
+				DF765CED2315DA1C008849FF /* ColorsViewController.swift */,
 				DF765CB52315B6C8008849FF /* AppDelegate.swift */,
-				DF765CB72315B6C8008849FF /* ViewController.swift */,
+				DF765CE92315C98A008849FF /* colors.json */,
 				DF765CB92315B6C8008849FF /* Main.storyboard */,
+				DF765CEB2315CB43008849FF /* Colors.swift */,
 				DF765CBC2315B6C9008849FF /* Assets.xcassets */,
 				DF765CBE2315B6C9008849FF /* LaunchScreen.storyboard */,
 				DF765CC12315B6C9008849FF /* Info.plist */,
@@ -230,6 +236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF765CC02315B6C9008849FF /* LaunchScreen.storyboard in Resources */,
+				DF765CEA2315C98A008849FF /* colors.json in Resources */,
 				DF765CBD2315B6C9008849FF /* Assets.xcassets in Resources */,
 				DF765CBB2315B6C8008849FF /* Main.storyboard in Resources */,
 			);
@@ -256,7 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF765CB82315B6C8008849FF /* ViewController.swift in Sources */,
+				DF765CEC2315CB43008849FF /* Colors.swift in Sources */,
+				DF765CEE2315DA1C008849FF /* ColorsViewController.swift in Sources */,
 				DF765CB62315B6C8008849FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
