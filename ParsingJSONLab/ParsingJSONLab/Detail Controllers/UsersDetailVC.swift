@@ -9,12 +9,30 @@
 import UIKit
 
 class UsersDetailVC: UIViewController {
-
+    
+    var selectedUser: Result!
+    
+    @IBOutlet weak var DOBOut: UILabel!
+    
+    @IBOutlet weak var nameOut: UILabel!
+    
+    @IBOutlet weak var phoneOut: UILabel!
+    
+    @IBOutlet weak var adressOut: UILabel!
+    
+    
+    
+    
     override func viewDidLoad() {
+        DOBOut.text = "DOB: \((format: "%.10f", selectedUser.dob.date))"
+        nameOut.text = selectedUser.name.fullName()
+        phoneOut.text = "Phone: \(selectedUser.phone)"
+        adressOut.text = "Address: \(selectedUser.location.fullAddress())"
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+
     
 
     /*

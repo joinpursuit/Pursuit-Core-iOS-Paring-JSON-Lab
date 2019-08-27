@@ -17,13 +17,14 @@ class ColorDetailVC: UIViewController {
     
     @IBOutlet weak var hexOut: UILabel!
     
-    
+    @IBOutlet weak var RGBOut: UILabel!
     
     
     override func viewDidLoad() {
         nameOut.text = selectedColor.name.value
         hexOut.text = selectedColor.hex.value
         view.backgroundColor = UIColor(displayP3Red: CGFloat(selectedColor.rgb.fraction.r) , green: CGFloat(selectedColor.rgb.fraction.g), blue: CGFloat(selectedColor.rgb.fraction.b), alpha: 1)
+        RGBOut.text = "R: \(String(format: "%.02f", selectedColor.rgb.fraction.r)) / G: \(String(format: "%.02f", selectedColor.rgb.fraction.g)) / B: \(String(format: "%.02f", selectedColor.rgb.fraction.b))"
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
