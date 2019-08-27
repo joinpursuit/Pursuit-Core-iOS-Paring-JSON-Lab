@@ -10,7 +10,7 @@ import UIKit
 
 class ColorsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    var colors = [Colors]() {
+    var colors = [ColorValue]() {
         didSet {
             colorTableView.reloadData()
         }
@@ -20,18 +20,30 @@ class ColorsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return colors.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        let color = colors[indexPath.row]
+        let cell = colorTableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath)
+        cell.textLabel?.text = color.name.value
+        cell.detailTextLabel?.text = color.hex.value
+        cell.backgroundColor = UIColor.init(displayP3Red: CGFloat(color.rgb.fraction.r), green: CGFloat(color.rgb.fraction.g), blue: CGFloat(color.rgb.fraction.b), alpha: 1)
+        return cell
     }
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
     override func viewDidLoad() {
         colorTableView.delegate = self
         colorTableView.dataSource = self
         loadData()
+        print(colors)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
@@ -57,15 +69,14 @@ class ColorsViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let segueIdentifier = segue.identifier else { fatalError("No identifier in segue")
+        }
+        guard let ColorDetailVC = segue.destination as? ColorDetailVC
+            else { fatalError("Unexpected segue")}
+        guard let selectedIndexPath = colorTableView.indexPathForSelectedRow
+            else { fatalError("No row selected") }
+        ColorDetailVC.selectedColor = colors[selectedIndexPath.row]
     }
-    */
 
 }

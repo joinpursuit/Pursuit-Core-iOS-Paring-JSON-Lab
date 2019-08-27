@@ -16,10 +16,10 @@ enum JSONError: Error {
 struct Colors: Codable {
     var colors: [ColorValue]
     
-    static func getColors(from data: Data) throws -> [Colors] {
+    static func getColors(from data: Data) throws -> [ColorValue] {
         do {
-            let colors = try JSONDecoder().decode([Colors].self, from: data)
-            return colors
+            let colors = try JSONDecoder().decode(Colors.self, from: data)
+            return colors.colors
         } catch {
             //            fatalError("couldn't decode")
             throw JSONError.decodingError(error)

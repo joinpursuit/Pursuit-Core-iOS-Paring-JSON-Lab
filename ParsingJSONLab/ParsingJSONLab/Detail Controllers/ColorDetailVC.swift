@@ -10,7 +10,20 @@ import UIKit
 
 class ColorDetailVC: UIViewController {
 
+    var selectedColor: ColorValue!
+    
+    
+    @IBOutlet weak var nameOut: UILabel!
+    
+    @IBOutlet weak var hexOut: UILabel!
+    
+    
+    
+    
     override func viewDidLoad() {
+        nameOut.text = selectedColor.name.value
+        hexOut.text = selectedColor.hex.value
+        view.backgroundColor = UIColor(displayP3Red: CGFloat(selectedColor.rgb.fraction.r) , green: CGFloat(selectedColor.rgb.fraction.g), blue: CGFloat(selectedColor.rgb.fraction.b), alpha: 1)
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
