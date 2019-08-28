@@ -182,16 +182,32 @@
             </objects>
             <point key="canvasLocation" x="2014.4927536231885" y="-832.36607142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Colors Detail View Controller-->
         <scene sceneID="K9V-za-s4f">
             <objects>
-                <viewController id="6HN-ek-LVw" sceneMemberID="viewController">
+                <viewController id="6HN-ek-LVw" customClass="ColorsDetailViewController" customModule="Parsing_JSON_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6tC-fG-5YF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="colorName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIq-IA-YeA">
+                                <rect key="frame" x="118" y="268" width="119" height="29"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aIq-IA-YeA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="K8T-dR-eoL" secondAttribute="leading" symbolic="YES" id="AHy-ee-XtO"/>
+                            <constraint firstItem="K8T-dR-eoL" firstAttribute="top" secondItem="aIq-IA-YeA" secondAttribute="bottom" constant="-209" id="GX0-Gd-dXT"/>
+                            <constraint firstItem="K8T-dR-eoL" firstAttribute="trailing" secondItem="aIq-IA-YeA" secondAttribute="trailing" constant="177" id="zDw-Pp-g5h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="K8T-dR-eoL"/>
                     </view>
+                    <connections>
+                        <outlet property="colorName" destination="aIq-IA-YeA" id="qLu-LW-Gjs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0Qn-Hj-Rd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -216,11 +232,11 @@
             </objects>
             <point key="canvasLocation" x="187" y="-506"/>
         </scene>
-        <!--Item 1-->
+        <!--Colors-->
         <scene sceneID="sZv-qp-q3S">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Epc-8x-tEb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="Pcu-4F-NUz"/>
+                    <tabBarItem key="tabBarItem" title="Colors" id="Pcu-4F-NUz" userLabel="Colors API"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Qnv-ST-zIs">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -235,11 +251,11 @@
             </objects>
             <point key="canvasLocation" x="1104.3478260869565" y="-832.36607142857144"/>
         </scene>
-        <!--Item 2-->
+        <!--Weather-->
         <scene sceneID="iJZ-PC-tT2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="sHs-UD-Iva" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="yeR-yF-Uvl"/>
+                    <tabBarItem key="tabBarItem" title="Weather" id="yeR-yF-Uvl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LHb-uW-7FT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -258,7 +274,7 @@
         <scene sceneID="o5x-Ru-00h">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1At-Zy-7dO" userLabel="Item 3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Aqt-sD-tjC"/>
+                    <tabBarItem key="tabBarItem" title="Random User" id="Aqt-sD-tjC"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="2om-cf-tCX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

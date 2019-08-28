@@ -23,6 +23,13 @@ class ColorsViewController: UIViewController {
         super.viewDidLoad()
         ColorsTableView.dataSource = self
         loadData()
+        
+        //Created a segue with a constant variable, to pass data to detail VC
+//        func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//            guard let indexPath = ColorsTableView.indexPathForSelectedRow, let ColorsDetailViewController = segue.destination as? ColorsDetailViewController else {return}
+//            
+//            let colorsToDetail = [indexPath.row]
+//            ColorsDetailViewController.view = colorsToDetail
     }
     private func loadData() {
         guard let pathToJSONFile = Bundle.main.path(forResource: "colors", ofType: "json") else {fatalError("Couldn't find json file")}
@@ -34,14 +41,8 @@ class ColorsViewController: UIViewController {
         catch {
             print(error)
         }
-        
-        
-        
-        
-        }
-    
     }
-   
+}
 extension ColorsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allColors.count
@@ -50,7 +51,7 @@ extension ColorsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = ColorsTableView.dequeueReusableCell(withIdentifier: "colorsInfoCell")
         cell?.textLabel?.text = allColors[indexPath.row].name.value
-        cell?.detailTextLabel?.text = "Hex:\(allColors[indexPath.row].hex.value)"
+        cell?.detailTextLabel?.text = "hex:\(allColors[indexPath.row].hex.value)"
         return cell!
     }
     
