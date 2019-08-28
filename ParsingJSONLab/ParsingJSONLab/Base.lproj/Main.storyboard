@@ -82,7 +82,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Conditions" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mcT-mO-VNu">
-                                <rect key="frame" x="68" y="378" width="279" height="72"/>
+                                <rect key="frame" x="68" y="463" width="279" height="72"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Main" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mCa-Mb-83W">
+                                <rect key="frame" x="68" y="383" width="279" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -92,6 +99,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="d00-Yi-kse"/>
                     </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="Y9m-I6-hpe" id="fjn-Gq-YcE"/>
+                        <outlet property="conditionsLabel" destination="mcT-mO-VNu" id="4bD-2e-nQi"/>
+                        <outlet property="mainLabel" destination="mCa-Mb-83W" id="QMe-V8-1Hm"/>
+                        <outlet property="tempLabel" destination="eNB-nK-Lfc" id="P6a-Of-Eld"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="grN-0G-pIr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

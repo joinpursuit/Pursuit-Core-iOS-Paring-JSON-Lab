@@ -1,4 +1,8 @@
-[
+{
+    "cod": "200",
+    "calctime": 0.3107,
+    "cnt": 15,
+    "list": [
         {
             "id": 2208791,
             "name": "Yafran",
@@ -26,14 +30,14 @@
             "clouds": {
                 "all": 88
             },
-            "weather":
+            "weather": [
                 {
                     "id": 500,
                     "main": "Rain",
                     "description": "light rain",
                     "icon": "10d"
                 }
-            
+            ]
         },
         {
             "id": 2208425,
@@ -59,14 +63,14 @@
             "clouds": {
                 "all": 56
             },
-            "weather":
+            "weather": [
                 {
                     "id": 803,
                     "main": "Clouds",
                     "description": "broken clouds",
                     "icon": "04d"
                 }
-            
+            ]
         },
         {
             "id": 2212771,
@@ -92,14 +96,14 @@
             "clouds": {
                 "all": 92
             },
-            "weather":
+            "weather": [
                 {
                     "id": 804,
                     "main": "Clouds",
                     "description": "overcast clouds",
                     "icon": "04d"
                 }
-            
+            ]
         },
         {
             "id": 2217362,
@@ -128,14 +132,14 @@
             "clouds": {
                 "all": 92
             },
-            "weather":
+            "weather": [
                 {
                     "id": 500,
                     "main": "Rain",
                     "description": "light rain",
                     "icon": "10d"
                 }
-            
+            ]
         },
         {
             "id": 2216885,
@@ -159,14 +163,14 @@
             "clouds": {
                 "all": 40
             },
-            "weather":
+            "weather": [
                 {
                     "id": 802,
                     "main": "Clouds",
                     "description": "scattered clouds",
                     "icon": "03d"
                 }
-            
+            ]
         },
         {
             "id": 2210247,
@@ -190,14 +194,14 @@
             "clouds": {
                 "all": 40
             },
-            "weather":
+            "weather": [
                 {
                     "id": 802,
                     "main": "Clouds",
                     "description": "scattered clouds",
                     "icon": "03d"
                 }
-            
+            ]
         },
         {
             "id": 2210221,
@@ -221,14 +225,14 @@
             "clouds": {
                 "all": 40
             },
-            "weather":
+            "weather": [
                 {
                     "id": 802,
                     "main": "Clouds",
                     "description": "scattered clouds",
                     "icon": "03d"
                 }
-            
+            ]
         },
         {
             "id": 2215163,
@@ -257,14 +261,14 @@
             "clouds": {
                 "all": 88
             },
-            "weather":
+            "weather": [
                 {
                     "id": 500,
                     "main": "Rain",
                     "description": "light rain",
                     "icon": "10d"
                 }
-            
+            ]
         },
         {
             "id": 2219905,
@@ -290,14 +294,14 @@
             "clouds": {
                 "all": 88
             },
-            "weather":
+            "weather": [
                 {
                     "id": 804,
                     "main": "Clouds",
                     "description": "overcast clouds",
                     "icon": "04d"
                 }
-            
+            ]
         },
         {
             "id": 2208485,
@@ -323,14 +327,14 @@
             "clouds": {
                 "all": 88
             },
-            "weather":
+            "weather": [
                 {
                     "id": 804,
                     "main": "Clouds",
                     "description": "overcast clouds",
                     "icon": "04d"
                 }
-            
+            ]
         },
         {
             "id": 2563191,
@@ -356,14 +360,14 @@
             "clouds": {
                 "all": 40
             },
-            "weather":
+            "weather": [
                 {
                     "id": 802,
                     "main": "Clouds",
                     "description": "scattered clouds",
                     "icon": "03d"
                 }
-            
+            ]
         },
         {
             "id": 2523650,
@@ -389,14 +393,14 @@
             "clouds": {
                 "all": 20
             },
-            "weather":
+            "weather": [
                 {
                     "id": 801,
                     "main": "Clouds",
                     "description": "few clouds",
                     "icon": "02d"
                 }
-            
+            ]
         },
         {
             "id": 2523693,
@@ -422,14 +426,14 @@
             "clouds": {
                 "all": 20
             },
-            "weather":
+            "weather": [
                 {
                     "id": 801,
                     "main": "Clouds",
                     "description": "few clouds",
                     "icon": "02d"
                 }
-            
+            ]
         },
         {
             "id": 2524119,
@@ -453,14 +457,14 @@
             "clouds": {
                 "all": 40
             },
-            "weather":
+            "weather": [
                 {
                     "id": 802,
                     "main": "Clouds",
                     "description": "scattered clouds",
                     "icon": "03d"
                 }
-            
+            ]
         },
         {
             "id": 2523581,
@@ -484,14 +488,14 @@
             "clouds": {
                 "all": 40
             },
-            "weather":
+            "weather": [
                 {
                     "id": 802,
                     "main": "Clouds",
                     "description": "scattered clouds",
                     "icon": "03d"
                 }
-            
+            ]
         }
-]
-
+    ]
+}

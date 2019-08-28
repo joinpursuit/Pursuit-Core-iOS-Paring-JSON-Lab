@@ -10,7 +10,26 @@ import UIKit
 
 class WeatherDetailVC: UIViewController {
 
+    var selectedCity: City!
+    
+    
+    @IBOutlet weak var cityNameLabel: UILabel!
+    
+    
+    
+    @IBOutlet weak var conditionsLabel: UILabel!
+    
+    
+    @IBOutlet weak var tempLabel: UILabel!
+    
+    
+    @IBOutlet weak var mainLabel: UILabel!
+    
     override func viewDidLoad() {
+        cityNameLabel.text = selectedCity.name
+        conditionsLabel.text = selectedCity.weather[0].description
+        tempLabel.text = " \( String(selectedCity.weather[0].id)) degrees"
+        mainLabel.text = selectedCity.weather[0].main
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.

@@ -13,7 +13,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     @IBOutlet weak var weatherTableView: UITableView!
     
     
-    var cities = [Cities]() {
+    var cities = [City]() {
         didSet {
             weatherTableView.reloadData()
         }
@@ -45,7 +45,7 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
         let url = URL(fileURLWithPath: pathToJSONFile)
         do {
             let data = try Data(contentsOf: url)
-            let resultsFromJSON = try Cities.getResult(from: data)
+            let resultsFromJSON = try CityList.getResult(from: data)
             cities = resultsFromJSON
             
         } catch {
@@ -65,14 +65,14 @@ class WeatherViewController: UIViewController, UITableViewDelegate, UITableViewD
     
   
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        guard let segueIdentifier = segue.identifier else { fatalError("No identifier in segue")
+        }
+        guard let DetailVC = segue.destination as? WeatherDetailVC
+            else { fatalError("Unexpected segue")}
+        guard let selectedIndexPath = weatherTableView.indexPathForSelectedRow
+            else { fatalError("No row selected") }
+        DetailVC.selectedCity = cities[selectedIndexPath.row]
     }
-    */
 
 }

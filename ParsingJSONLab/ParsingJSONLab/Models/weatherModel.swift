@@ -9,14 +9,14 @@
 import Foundation
 import UIKit
 
-struct Cities: Codable {
-    var name: String
-    var main: Main
+
+struct CityList: Codable {
+    var list: [City]
     
-    static func getResult(from data: Data) throws -> [Cities] {
+    static func getResult(from data: Data) throws -> [City] {
         do {
-            let cities = try JSONDecoder().decode([Cities].self, from: data)
-            return cities
+            let cities = try JSONDecoder().decode(CityList.self, from: data)
+            return cities.list
         } catch {
             //            fatalError("couldn't decode")
             throw JSONError.decodingError(error)
@@ -24,10 +24,13 @@ struct Cities: Codable {
     }
 }
 
-
-struct Main: Codable {
-    var weather: Weather
+struct City: Codable {
+    var name: String
+    var weather: [Weather]
 }
+
+
+
 
 struct Weather: Codable {
     var id: Int
