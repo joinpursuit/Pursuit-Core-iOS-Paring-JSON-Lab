@@ -56,4 +56,6 @@ struct userLocation: Codable {
 struct UserDOB: Codable {
     var date: String
     var age: Int
+
 }
+

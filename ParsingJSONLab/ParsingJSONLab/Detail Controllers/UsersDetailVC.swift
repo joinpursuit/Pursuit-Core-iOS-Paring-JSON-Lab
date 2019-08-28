@@ -24,7 +24,7 @@ class UsersDetailVC: UIViewController {
     
     
     override func viewDidLoad() {
-        DOBOut.text = "DOB: \((format: "%.10f", selectedUser.dob.date))"
+        DOBOut.text = "DOB: \(selectedUser.dob.date)"
         nameOut.text = selectedUser.name.fullName()
         phoneOut.text = "Phone: \(selectedUser.phone)"
         adressOut.text = "Address: \(selectedUser.location.fullAddress())"
