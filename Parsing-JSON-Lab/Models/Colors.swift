@@ -40,6 +40,7 @@ struct hexWrapper: Codable {
 
 struct rgbWrapper: Codable {
     let fraction: fractionWrapper
+    let value: String
 }
 
 struct fractionWrapper: Codable {

@@ -10,19 +10,42 @@ import UIKit
 
 class ColorsDetailViewController: UIViewController {
 
-    var colors: AllColors!
+    var colors: ColorsInfo!
     
     
     @IBOutlet weak var colorName: UILabel!
   
+    
+   @IBOutlet weak var rgbLabel: UILabel!
+    
+    
+    @IBOutlet weak var hexLabel: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        labelName()
+        hexValues()
+        rgbValues()
         
         
-        // Do any additional setup after loading the view.
+    }
+    private func labelName() {
+        colorName.text = colors.name.value
     }
     
-
+    private func hexValues() {
+        hexLabel.text = colors.rgb.value
+        
+        
+    }
+    
+    private func rgbValues() {
+        rgbLabel.text = colors.hex.clean
+        
+        
+    }
+    
     /*
     // MARK: - Navigation
 
