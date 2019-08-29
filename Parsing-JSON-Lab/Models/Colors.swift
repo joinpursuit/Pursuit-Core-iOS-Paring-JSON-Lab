@@ -52,3 +52,4 @@ struct fractionWrapper: Codable {
 struct nameWrapper: Codable {
     let value: String
 }
+

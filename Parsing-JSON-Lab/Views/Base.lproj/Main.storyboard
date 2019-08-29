@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="2938" y="493"/>
         </scene>
-        <!--View Controller-->
+        <!--Weather View Controller-->
         <scene sceneID="AxC-tu-gdk">
             <objects>
-                <viewController id="pl6-E1-Uyk" sceneMemberID="viewController">
+                <viewController id="pl6-E1-Uyk" customClass="WeatherViewController" customModule="Parsing_JSON_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jdS-DV-qk0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -78,7 +78,7 @@
                                 <rect key="frame" x="0.0" y="85.5" width="414" height="725"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="GYo-3V-y4Z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="citiesNames" id="GYo-3V-y4Z">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GYo-3V-y4Z" id="QCE-bJ-nMg">
@@ -102,25 +102,64 @@
                         <viewLayoutGuide key="safeArea" id="v8D-mP-293"/>
                     </view>
                     <navigationItem key="navigationItem" id="yNK-Ew-I9n"/>
+                    <connections>
+                        <outlet property="WeatherTableView" destination="XQ9-jF-duy" id="Gpz-rM-kZP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVI-0h-w7c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2014.4927536231885" y="-183.48214285714286"/>
         </scene>
-        <!--View Controller-->
+        <!--Weather Detail View Controller-->
         <scene sceneID="DMO-cb-1jc">
             <objects>
-                <viewController id="4WD-P9-oky" sceneMemberID="viewController">
+                <viewController id="4WD-P9-oky" customClass="WeatherDetailViewController" customModule="Parsing_JSON_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="E4q-dP-51h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city's name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CLR-VI-bve">
+                                <rect key="frame" x="186" y="387" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temperature" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8e-0Y-Ppk">
+                                <rect key="frame" x="185" y="434" width="95" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weather" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDW-MM-ope">
+                                <rect key="frame" x="186" y="492" width="62" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="KDW-MM-ope" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4q-U5-Ckn" secondAttribute="leading" symbolic="YES" id="7T3-mq-rwU"/>
+                            <constraint firstItem="CLR-VI-bve" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4q-U5-Ckn" secondAttribute="leading" symbolic="YES" id="8A2-8I-e1V"/>
+                            <constraint firstItem="X8e-0Y-Ppk" firstAttribute="top" secondItem="CLR-VI-bve" secondAttribute="bottom" constant="26" id="JJD-SO-KT0"/>
+                            <constraint firstItem="X8e-0Y-Ppk" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="I4q-U5-Ckn" secondAttribute="leading" id="Lz3-eg-uQ5"/>
+                            <constraint firstItem="KDW-MM-ope" firstAttribute="top" secondItem="X8e-0Y-Ppk" secondAttribute="bottom" constant="37" id="QBS-oa-g8t"/>
+                            <constraint firstItem="X8e-0Y-Ppk" firstAttribute="top" secondItem="E4q-dP-51h" secondAttribute="top" constant="434" id="fW3-Er-68H"/>
+                            <constraint firstItem="I4q-U5-Ckn" firstAttribute="trailing" secondItem="X8e-0Y-Ppk" secondAttribute="trailing" constant="134" id="gwn-D8-sxv"/>
+                            <constraint firstItem="I4q-U5-Ckn" firstAttribute="trailing" secondItem="CLR-VI-bve" secondAttribute="trailing" constant="141" id="jyM-n2-YJh"/>
+                            <constraint firstItem="I4q-U5-Ckn" firstAttribute="trailing" secondItem="KDW-MM-ope" secondAttribute="trailing" constant="166" id="wgy-3T-O1H"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="I4q-U5-Ckn"/>
                     </view>
+                    <connections>
+                        <outlet property="cityName" destination="CLR-VI-bve" id="iTt-wx-tEm"/>
+                        <outlet property="currentTemp" destination="X8e-0Y-Ppk" id="sC8-Sf-WGu"/>
+                        <outlet property="currentWeather" destination="KDW-MM-ope" id="cAE-mu-kfL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pm2-vp-ebF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2938" y="-183"/>
+            <point key="canvasLocation" x="2937.68115942029" y="-183.48214285714286"/>
         </scene>
         <!--Colors View Controller-->
         <scene sceneID="CYZ-fa-2wd">

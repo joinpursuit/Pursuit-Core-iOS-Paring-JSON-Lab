@@ -17,6 +17,10 @@
 		DF765CEC2315CB43008849FF /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CEB2315CB43008849FF /* Colors.swift */; };
 		DF765CEE2315DA1C008849FF /* ColorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CED2315DA1C008849FF /* ColorsViewController.swift */; };
 		DF765CF023161397008849FF /* ColorsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF765CEF23161397008849FF /* ColorsDetailViewController.swift */; };
+		DF7E2B2123175DA700DB25E5 /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = DF7E2B2023175DA700DB25E5 /* weather.json */; };
+		DFF898EB23172D6F00540E14 /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF898EA23172D6F00540E14 /* Weather.swift */; };
+		DFF898EF2317377C00540E14 /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF898EE2317377C00540E14 /* WeatherViewController.swift */; };
+		DFF898F12317408700540E14 /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFF898F02317408700540E14 /* WeatherDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		DF765CEB2315CB43008849FF /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DF765CED2315DA1C008849FF /* ColorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsViewController.swift; sourceTree = "<group>"; };
 		DF765CEF23161397008849FF /* ColorsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsDetailViewController.swift; sourceTree = "<group>"; };
+		DF7E2B2023175DA700DB25E5 /* weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
+		DFF898EA23172D6F00540E14 /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		DFF898EE2317377C00540E14 /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
+		DFF898F02317408700540E14 /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +145,8 @@
 			children = (
 				DF765CEF23161397008849FF /* ColorsDetailViewController.swift */,
 				DF765CED2315DA1C008849FF /* ColorsViewController.swift */,
+				DFF898EE2317377C00540E14 /* WeatherViewController.swift */,
+				DFF898F02317408700540E14 /* WeatherDetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -152,8 +162,10 @@
 		DF765CF3231613E8008849FF /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DF765CEB2315CB43008849FF /* Colors.swift */,
 				DF765CE92315C98A008849FF /* colors.json */,
+				DF765CEB2315CB43008849FF /* Colors.swift */,
+				DFF898EA23172D6F00540E14 /* Weather.swift */,
+				DF7E2B2023175DA700DB25E5 /* weather.json */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -263,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF765CC02315B6C9008849FF /* LaunchScreen.storyboard in Resources */,
+				DF7E2B2123175DA700DB25E5 /* weather.json in Resources */,
 				DF765CEA2315C98A008849FF /* colors.json in Resources */,
 				DF765CBD2315B6C9008849FF /* Assets.xcassets in Resources */,
 				DF765CBB2315B6C8008849FF /* Main.storyboard in Resources */,
@@ -291,9 +304,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DF765CEC2315CB43008849FF /* Colors.swift in Sources */,
+				DFF898EF2317377C00540E14 /* WeatherViewController.swift in Sources */,
 				DF765CEE2315DA1C008849FF /* ColorsViewController.swift in Sources */,
+				DFF898F12317408700540E14 /* WeatherDetailViewController.swift in Sources */,
 				DF765CF023161397008849FF /* ColorsDetailViewController.swift in Sources */,
 				DF765CB62315B6C8008849FF /* AppDelegate.swift in Sources */,
+				DFF898EB23172D6F00540E14 /* Weather.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
