@@ -22,6 +22,7 @@ class ColorsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         ColorsTableView.dataSource = self
+        ColorsTableView.rowHeight = 125
         loadData()
         
     }
@@ -49,9 +50,11 @@ extension ColorsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let colors = allColors[indexPath.row]
         let cell = ColorsTableView.dequeueReusableCell(withIdentifier: "colorsInfoCell")
         cell?.textLabel?.text = allColors[indexPath.row].name.value
         cell?.detailTextLabel?.text = "hex:\(allColors[indexPath.row].hex.value)"
+        cell?.backgroundColor = UIColor.init(displayP3Red: CGFloat(colors.rgb.fraction.r), green: (colors.rgb.fraction.g), blue: (colors.rgb.fraction.b), alpha: 1)
         return cell!
     }
     

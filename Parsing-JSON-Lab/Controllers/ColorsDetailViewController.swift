@@ -27,7 +27,7 @@ class ColorsDetailViewController: UIViewController {
         labelName()
         hexValues()
         rgbValues()
-        
+        view.backgroundColor = UIColor(displayP3Red: CGFloat(colors.rgb.fraction.r) , green: CGFloat(colors.rgb.fraction.g), blue: CGFloat(colors.rgb.fraction.b), alpha: 1)
         
     }
     private func labelName() {

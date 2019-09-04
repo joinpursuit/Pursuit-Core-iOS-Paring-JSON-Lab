@@ -28,24 +28,15 @@ class WeatherDetailViewController: UIViewController {
         
     }
     private func nameLabel() {
-        cityName.text = weather.name
+        cityName.text = ("City: \(weather.name)")
     }
 
     private func tempLabel() {
-        currentTemp.text = weather.main.temp.description
+        currentTemp.text = ("Main Temperature: \(weather.main.temp.description) F")
     }
     
     private func weatherLabel() {
-        currentWeather.text = weather.weather.weather.description
+        currentWeather.text = ("Current Weather: \(weather.weather[0].description)")
+        //It's an Array so we have to access it this way
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
