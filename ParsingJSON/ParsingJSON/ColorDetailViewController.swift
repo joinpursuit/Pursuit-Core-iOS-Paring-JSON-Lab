@@ -25,22 +25,14 @@ class ColorDetailViewController: UIViewController {
         guard let color = detailColor else {
             fatalError("detailColor is nil, verify prepare for seque")
         }
+        navigationItem.title = color.name.value
+        hexLabel.text = "Hex is: \(color.hex.value)"
+        hexLabel.textColor = .white
+        rgbLabel.text = "Value for: \(color.rgb.value)"
+        rgbLabel.textColor = .white
+        view.backgroundColor = UIColor(red: CGFloat(color.rgb.r)/255, green: CGFloat(color.rgb.g)/255, blue: CGFloat(color.rgb.b)/255, alpha: 1)
     }
-    
-   // navigationItem.title = color.name.value
-//    hexLabel.text = color.hex.value
-//    rgbLabel.text = color.rgb.value
-    
 }
 
 
-//
-//    navigationItem.title = weather.name
-//    tempLabel.text = "Current temperature is \(String(weather.main.temp))"
-//    minTempLabel.text = "Lowest temperature is \( String(weather.main.temp_min))"
-//    maxTempLabel.text = "Warmest temperature is \(String(weather.main.temp_max))"
-//    preassureLabel.text = "Air pressure is \(String(weather.main.pressure))"
-//    humidityLabel.text = "Humidity is \(String(weather.main.humidity))"
-//    windSpeedLabel.text = "Wind speed is \(String(weather.wind.speed))"
-//    cloudsLabel.text = "Clouds in the sky: \(String(weather.clouds.all))"
-//}
+

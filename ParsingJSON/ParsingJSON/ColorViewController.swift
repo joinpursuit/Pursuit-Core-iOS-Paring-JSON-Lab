@@ -51,6 +51,8 @@ extension ColorViewController: UITableViewDataSource {
         let color = colors[indexPath.row]
         
         cell.textLabel?.text = color.name.value
+        cell.textLabel?.textColor = .white
+        cell.backgroundColor = UIColor(red: CGFloat(color.rgb.r)/255, green: CGFloat(color.rgb.g)/255, blue: CGFloat(color.rgb.b)/255, alpha: 1)
         
         return cell
     }

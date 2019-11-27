@@ -24,6 +24,9 @@ struct Hex: Codable {
 }
 
 struct RGB: Codable {
+    let r: Int
+    let g: Int
+    let b: Int
     let value: String
 }
 
