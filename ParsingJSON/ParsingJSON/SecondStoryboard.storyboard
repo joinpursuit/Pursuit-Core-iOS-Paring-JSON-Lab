@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detailed Weather View Controller-->
+        <scene sceneID="RSD-5P-otV">
+            <objects>
+                <viewController storyboardIdentifier="detailedWeatherVC" id="0vH-ok-VLH" customClass="DetailedWeatherViewController" customModule="ParsingJSON" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UC6-7y-Lpv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q8W-rS-TMc" userLabel="tempLabel">
+                                <rect key="frame" x="20" y="200" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dGs-Pi-XFw" userLabel="weatherLabel">
+                                <rect key="frame" x="20" y="264.5" width="374" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W6j-Gv-YqE" userLabel="cityName">
+                                <rect key="frame" x="20" y="64" width="374" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q8W-rS-TMc" firstAttribute="top" secondItem="W6j-Gv-YqE" secondAttribute="bottom" multiplier="2" id="4VE-VP-6Io"/>
+                            <constraint firstItem="q8W-rS-TMc" firstAttribute="leading" secondItem="so3-X5-xu1" secondAttribute="leading" constant="20" id="61L-5i-eXI"/>
+                            <constraint firstItem="dGs-Pi-XFw" firstAttribute="leading" secondItem="so3-X5-xu1" secondAttribute="leading" constant="20" id="AT8-g0-dfv"/>
+                            <constraint firstItem="so3-X5-xu1" firstAttribute="trailing" secondItem="dGs-Pi-XFw" secondAttribute="trailing" constant="20" id="Bgh-KK-4P6"/>
+                            <constraint firstItem="so3-X5-xu1" firstAttribute="trailing" secondItem="W6j-Gv-YqE" secondAttribute="trailing" constant="20" id="HZJ-71-Den"/>
+                            <constraint firstItem="W6j-Gv-YqE" firstAttribute="leading" secondItem="so3-X5-xu1" secondAttribute="leading" constant="20" id="MHi-OJ-CIp"/>
+                            <constraint firstItem="so3-X5-xu1" firstAttribute="trailing" secondItem="q8W-rS-TMc" secondAttribute="trailing" constant="20" id="WZc-8e-Y9a"/>
+                            <constraint firstItem="W6j-Gv-YqE" firstAttribute="top" secondItem="so3-X5-xu1" secondAttribute="top" constant="20" id="kCP-ay-Wyu"/>
+                            <constraint firstItem="dGs-Pi-XFw" firstAttribute="top" secondItem="q8W-rS-TMc" secondAttribute="bottom" multiplier="1.2" id="yf2-TY-FO6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="so3-X5-xu1"/>
+                    </view>
+                    <connections>
+                        <outlet property="cityNameLabel" destination="W6j-Gv-YqE" id="2d4-Eo-gPh"/>
+                        <outlet property="temperatureLabel" destination="q8W-rS-TMc" id="g97-KQ-zKJ"/>
+                        <outlet property="weatherLabel" destination="dGs-Pi-XFw" id="Bdg-bR-QFR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="77Z-ti-qd5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="86.383928571428569"/>
+        </scene>
+    </scenes>
+</document>
