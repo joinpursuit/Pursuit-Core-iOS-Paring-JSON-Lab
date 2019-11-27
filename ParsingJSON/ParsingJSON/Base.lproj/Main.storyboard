@@ -191,29 +191,51 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Color View Controller-->
         <scene sceneID="hho-tP-AIE">
             <objects>
-                <viewController id="2O9-Gl-XQb" sceneMemberID="viewController">
+                <viewController id="2O9-Gl-XQb" customClass="ColorViewController" customModule="ParsingJSON" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Mb5-Sh-qFV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XaX-tU-KTC">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="d46-l9-Y7E">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="omH-zM-c6d" style="IBUITableViewCellStyleDefault" id="tth-Zq-a8v">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tth-Zq-a8v" id="ZJM-nM-kuN">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="omH-zM-c6d">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="XaX-tU-KTC" firstAttribute="top" secondItem="NVl-4N-IMn" secondAttribute="top" id="0cO-KT-mcQ"/>
-                            <constraint firstItem="XaX-tU-KTC" firstAttribute="leading" secondItem="NVl-4N-IMn" secondAttribute="leading" id="5xS-CZ-hYx"/>
-                            <constraint firstItem="XaX-tU-KTC" firstAttribute="trailing" secondItem="NVl-4N-IMn" secondAttribute="trailing" id="CqC-Nb-5sf"/>
-                            <constraint firstItem="XaX-tU-KTC" firstAttribute="bottom" secondItem="NVl-4N-IMn" secondAttribute="bottom" id="hn8-LW-gkH"/>
+                            <constraint firstItem="d46-l9-Y7E" firstAttribute="top" secondItem="NVl-4N-IMn" secondAttribute="top" id="4ys-TW-Xil"/>
+                            <constraint firstItem="d46-l9-Y7E" firstAttribute="bottom" secondItem="NVl-4N-IMn" secondAttribute="bottom" id="B45-i4-OAG"/>
+                            <constraint firstItem="d46-l9-Y7E" firstAttribute="leading" secondItem="NVl-4N-IMn" secondAttribute="leading" id="BfD-OA-GC3"/>
+                            <constraint firstItem="d46-l9-Y7E" firstAttribute="trailing" secondItem="NVl-4N-IMn" secondAttribute="trailing" id="NAG-EM-eTQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NVl-4N-IMn"/>
                     </view>
                     <navigationItem key="navigationItem" id="UPY-IT-Y7Y"/>
+                    <connections>
+                        <outlet property="tableView" destination="d46-l9-Y7E" id="jPS-g8-22G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSO-NJ-9ak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -289,7 +311,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="2O9-Gl-XQb" kind="relationship" relationship="rootViewController" id="KsC-kX-le1"/>
+                        <segue destination="2O9-Gl-XQb" kind="relationship" relationship="rootViewController" id="fuY-kv-RTh"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SMt-wg-nwF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
