@@ -15,19 +15,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Yvo-Ol-ulz">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C27-YC-bvd">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="SGx-aZ-Ppd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cityCell" textLabel="57N-dj-EH8" style="IBUITableViewCellStyleDefault" id="xEa-6q-3pd">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SGx-aZ-Ppd" id="rwm-gA-WYi">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xEa-6q-3pd" id="oZn-zp-iCv">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="57N-dj-EH8">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="qFW-14-i1D" kind="show" id="Etf-rn-t9N"/>
+                                            <segue destination="qFW-14-i1D" kind="show" id="zYz-j4-tud"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -35,23 +44,26 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Yvo-Ol-ulz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="0YF-jG-9O4"/>
-                            <constraint firstItem="Yvo-Ol-ulz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Sb8-Z2-eO7"/>
-                            <constraint firstItem="Yvo-Ol-ulz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Uzp-nr-ILx"/>
-                            <constraint firstItem="Yvo-Ol-ulz" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="gKy-G6-Ji5"/>
+                            <constraint firstItem="C27-YC-bvd" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="FQa-z4-U9Z"/>
+                            <constraint firstItem="C27-YC-bvd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Q5h-XJ-7sB"/>
+                            <constraint firstItem="C27-YC-bvd" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="mtj-oY-8LM"/>
+                            <constraint firstItem="C27-YC-bvd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="t89-bL-quG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="wWZ-2V-rPW"/>
+                    <connections>
+                        <outlet property="tableView" destination="C27-YC-bvd" id="VZd-9O-0YQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="113.83928571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Weather Detail View Controller-->
         <scene sceneID="7Rg-7W-bLp">
             <objects>
-                <viewController id="qFW-14-i1D" sceneMemberID="viewController">
+                <viewController id="qFW-14-i1D" customClass="WeatherDetailViewController" customModule="ParsingJSON" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eQO-zY-MWa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,6 +82,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Fet-y6-2sD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="6wE-Lb-vxj">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -95,7 +108,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="U6G-x1-DuI"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="kuM-st-Vlt"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SCg-b8-e2g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
