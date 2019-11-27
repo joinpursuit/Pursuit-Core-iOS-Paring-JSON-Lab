@@ -10,21 +10,29 @@ import UIKit
 
 class DetailedColourViewController: UIViewController {
 
+    @IBOutlet weak var hexLabel: UILabel!
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var greenLabel: UILabel!
+    @IBOutlet weak var blueLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    
+    var currentColour: Colour?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUp()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setUp(){
+        guard let currColour = currentColour else {
+            print("Colour variable has no value.")
+            return
+        }
+        nameLabel.text  = currColour.name.value
+        hexLabel.text = "Hexadecimal value: \(currColour.hex.value)"
+        redLabel.text = "R value: \(String(format:"%0.f", currColour.rgb.fraction.r * 255))"
+        greenLabel.text = "G value: \(String(format:"%0.f", currColour.rgb.fraction.g * 255))"
+        blueLabel.text = "B value: \(String(format:"%0.f", currColour.rgb.fraction.b * 255))"
     }
-    */
 
 }

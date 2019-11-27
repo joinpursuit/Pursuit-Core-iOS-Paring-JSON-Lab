@@ -58,5 +58,76 @@
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="86.383928571428569"/>
         </scene>
+        <!--Detailed Colour View Controller-->
+        <scene sceneID="aaK-Yp-nkt">
+            <objects>
+                <viewController storyboardIdentifier="detailedColourVC" id="SnC-rn-Hq9" customClass="DetailedColourViewController" customModule="ParsingJSON" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="91K-Nn-dN8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M9j-4m-NfH" userLabel="colourName">
+                                <rect key="frame" x="20" y="64" width="374" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htI-V2-Mcu" userLabel="redLabel">
+                                <rect key="frame" x="20" y="159" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VoB-Vs-t5C" userLabel="greenLabel">
+                                <rect key="frame" x="20" y="188" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DK0-gZ-Af1" userLabel="blueLabel">
+                                <rect key="frame" x="20" y="217" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3qp-Zh-5Qa" userLabel="hexLabel">
+                                <rect key="frame" x="20" y="285.5" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="htI-V2-Mcu" firstAttribute="top" secondItem="M9j-4m-NfH" secondAttribute="bottom" multiplier="1.5" id="Aby-bt-aq9"/>
+                            <constraint firstItem="M9j-4m-NfH" firstAttribute="top" secondItem="UdZ-31-7Pp" secondAttribute="top" constant="20" id="CUn-40-RRe"/>
+                            <constraint firstItem="3qp-Zh-5Qa" firstAttribute="leading" secondItem="UdZ-31-7Pp" secondAttribute="leading" constant="20" id="Dvx-Wm-UcC"/>
+                            <constraint firstItem="VoB-Vs-t5C" firstAttribute="leading" secondItem="UdZ-31-7Pp" secondAttribute="leading" constant="20" id="E6D-Y3-BcQ"/>
+                            <constraint firstItem="UdZ-31-7Pp" firstAttribute="trailing" secondItem="DK0-gZ-Af1" secondAttribute="trailing" constant="20" id="IKF-kH-OFo"/>
+                            <constraint firstItem="UdZ-31-7Pp" firstAttribute="trailing" secondItem="3qp-Zh-5Qa" secondAttribute="trailing" constant="20" id="Klf-Xt-7Ar"/>
+                            <constraint firstItem="htI-V2-Mcu" firstAttribute="leading" secondItem="UdZ-31-7Pp" secondAttribute="leading" constant="20" id="P6P-hf-G3X"/>
+                            <constraint firstItem="3qp-Zh-5Qa" firstAttribute="top" secondItem="DK0-gZ-Af1" secondAttribute="bottom" multiplier="1.2" id="azY-4s-osA"/>
+                            <constraint firstItem="M9j-4m-NfH" firstAttribute="leading" secondItem="UdZ-31-7Pp" secondAttribute="leading" constant="20" id="bpq-1d-DE8"/>
+                            <constraint firstItem="UdZ-31-7Pp" firstAttribute="trailing" secondItem="VoB-Vs-t5C" secondAttribute="trailing" constant="20" id="fsg-kr-knq"/>
+                            <constraint firstItem="UdZ-31-7Pp" firstAttribute="trailing" secondItem="htI-V2-Mcu" secondAttribute="trailing" constant="20" id="h4b-aE-ZyD"/>
+                            <constraint firstItem="DK0-gZ-Af1" firstAttribute="top" secondItem="VoB-Vs-t5C" secondAttribute="bottom" constant="8" id="oy1-9U-mVk"/>
+                            <constraint firstItem="UdZ-31-7Pp" firstAttribute="trailing" secondItem="M9j-4m-NfH" secondAttribute="trailing" constant="20" id="pEG-7f-aNn"/>
+                            <constraint firstItem="DK0-gZ-Af1" firstAttribute="leading" secondItem="UdZ-31-7Pp" secondAttribute="leading" constant="20" id="qiL-z7-jL3"/>
+                            <constraint firstItem="VoB-Vs-t5C" firstAttribute="top" secondItem="htI-V2-Mcu" secondAttribute="bottom" constant="8" id="rAG-hj-X5m"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UdZ-31-7Pp"/>
+                    </view>
+                    <connections>
+                        <outlet property="blueLabel" destination="DK0-gZ-Af1" id="e3B-aB-Kb4"/>
+                        <outlet property="greenLabel" destination="VoB-Vs-t5C" id="IYd-7T-wNb"/>
+                        <outlet property="hexLabel" destination="3qp-Zh-5Qa" id="ljn-8Q-uwC"/>
+                        <outlet property="nameLabel" destination="M9j-4m-NfH" id="Eju-Dd-lYn"/>
+                        <outlet property="redLabel" destination="htI-V2-Mcu" id="B1V-H4-hpC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IHn-Af-k1S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="998.55072463768124" y="85.714285714285708"/>
+        </scene>
     </scenes>
 </document>
