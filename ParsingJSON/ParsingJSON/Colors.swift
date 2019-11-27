@@ -35,7 +35,7 @@ struct Name: Codable {
 }
 
 extension ColorsData {
-    static func getWeather() -> [Colors] {
+    static func getColors() -> [Colors] {
         var color = [Colors]()
         
         guard let fileURL = Bundle.main.url(forResource: "colorData", withExtension: "json") else {

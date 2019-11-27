@@ -39,20 +39,6 @@ class ViewController: UIViewController {
         weatherVC.cityweather = city
     }
 }
-//override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//     // 1. get destination view controller
-//     // 2. indexpath user selected from the tableview
-//     guard let newsDetailController = segue.destination as? NewsDetailController,
-//         let indexPath = tableView.indexPathForSelectedRow else {
-//         fatalError("verify class name in identity inspector")
-//     }
-//
-//     // 3. get the selected headline
-//     let headline = headlines[indexPath.row]
-//
-//     // 4. set the newsDetailController newsHeadline
-//     newsDetailController.newsHeadline = headline
-// }
 
 extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

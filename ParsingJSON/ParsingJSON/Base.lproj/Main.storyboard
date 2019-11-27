@@ -203,7 +203,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" textLabel="omH-zM-c6d" style="IBUITableViewCellStyleDefault" id="tth-Zq-a8v">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="colorCell" textLabel="omH-zM-c6d" style="IBUITableViewCellStyleDefault" id="tth-Zq-a8v">
                                         <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tth-Zq-a8v" id="ZJM-nM-kuN">
@@ -219,6 +219,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="VVy-Lb-5By" kind="show" id="Cbe-tB-EOQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -241,20 +244,41 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="841.74107142857144"/>
         </scene>
-        <!--View Controller-->
+        <!--Color Detail View Controller-->
         <scene sceneID="5Y2-AA-B7e">
             <objects>
-                <viewController id="VVy-Lb-5By" sceneMemberID="viewController">
+                <viewController id="VVy-Lb-5By" customClass="ColorDetailViewController" customModule="ParsingJSON" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1z9-Gc-l96">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Hex Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcm-6X-UbU">
+                                <rect key="frame" x="20" y="161" width="374" height="49"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RGB Value" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWj-vs-oXT">
+                                <rect key="frame" x="20" y="353" width="374" height="57"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="mXG-sF-6df"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ccf-af-5pw"/>
+                    <connections>
+                        <outlet property="hexLabel" destination="fcm-6X-UbU" id="Y0i-qH-TPZ"/>
+                        <outlet property="rgbLabel" destination="oWj-vs-oXT" id="NSr-du-3h8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqs-oV-qmq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2935" y="842"/>
+            <point key="canvasLocation" x="2934.7826086956525" y="841.74107142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="Ngh-o6-JiK">
@@ -299,11 +323,11 @@
             </objects>
             <point key="canvasLocation" x="2935" y="1614"/>
         </scene>
-        <!--Item-->
+        <!--COLORS-->
         <scene sceneID="Xcj-cw-UBo">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0NS-gR-6Ri" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="wex-s6-zfg"/>
+                    <tabBarItem key="tabBarItem" title="COLORS" id="wex-s6-zfg"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k9q-gE-6iT">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>

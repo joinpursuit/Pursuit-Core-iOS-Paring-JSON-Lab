@@ -29,7 +29,7 @@ class WeatherDetailViewController: UIViewController {
     
     func updateUI() {
         guard let weather = cityweather else {
-            fatalError("newsHeadline is nil, verify prepare for seque")
+            fatalError("cityweather is nil, verify prepare for seque")
         }
         
         navigationItem.title = weather.name
