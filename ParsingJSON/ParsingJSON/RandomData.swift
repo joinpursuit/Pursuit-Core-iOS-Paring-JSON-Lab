@@ -33,25 +33,12 @@ struct Location: Codable {
     let city: String
     let state: String
     let country: String
-   // let postcode: Int
-   // let coordinates: Coordinates
-  //  let timezone: Timezone
 }
 
 struct Street: Codable {
     let number: Int
     let name: String
 }
-
-//struct Coordinates: Codable {
-//    let latitude: String
-//    let longitude: String
-//}
-//
-//struct Timezone: Codable {
-//    let offset: String
-//    let description: String
-//}
 
 struct DOB: Codable {
     let date: String

@@ -28,6 +28,16 @@ class UserGeneratorViewController: UIViewController {
     func loadData() {
         results = UserData.getUsersData()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let userDataVC = segue.destination as? UserDetailViewController, let indexPath  = tableView.indexPathForSelectedRow else {
+            fatalError("verify class name in identity inspector")
+        }
+        
+        let result = results[indexPath.row]
+        
+        userDataVC.userdata = result
+    }
 
 }
 
@@ -49,31 +59,4 @@ extension UserGeneratorViewController: UITableViewDataSource {
     }
 }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let colorVC = segue.destination as? ColorDetailViewController, let indexPath = tableView.indexPathForSelectedRow else {
-//        fatalError("verify class name in identity inspector")
-//    }
-//    let color = colors[indexPath.row]
-//    // TODO: add background of the cell
-//    
-//    colorVC.detailColor = color
-//}
-//}
-//
-//extension ColorViewController: UITableViewDataSource {
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return colors.count // should be 6
-//    }
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "colorCell", for: indexPath)
-//        
-//        let color = colors[indexPath.row]
-//        
-//        cell.textLabel?.text = color.name.value
-//        cell.textLabel?.textColor = .white
-//        cell.backgroundColor = UIColor(red: CGFloat(color.rgb.r)/255, green: CGFloat(color.rgb.g)/255, blue: CGFloat(color.rgb.b)/255, alpha: 1)
-//        
-//        return cell
-//    }
-//}
+

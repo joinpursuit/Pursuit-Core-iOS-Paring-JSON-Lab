@@ -347,14 +347,50 @@
                     <view key="view" contentMode="scaleToFill" id="PRB-AU-fDk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Address" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="clg-JG-Cu7">
+                                <rect key="frame" x="20" y="96" width="374" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bu9-V7-DEX">
+                                <rect key="frame" x="20" y="216.33333333333334" width="374" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOB" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nJ8-aw-FA0">
+                                <rect key="frame" x="20" y="336.66666666666669" width="374" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="nJ8-aw-FA0" firstAttribute="leading" secondItem="NF7-wf-xuD" secondAttribute="leading" constant="20" id="0Xl-Aj-1Nl"/>
+                            <constraint firstItem="clg-JG-Cu7" firstAttribute="leading" secondItem="NF7-wf-xuD" secondAttribute="leading" constant="20" id="1Yg-eE-PLP"/>
+                            <constraint firstItem="nJ8-aw-FA0" firstAttribute="top" secondItem="Bu9-V7-DEX" secondAttribute="bottom" constant="100" id="Hfv-6y-wOW"/>
+                            <constraint firstItem="clg-JG-Cu7" firstAttribute="top" secondItem="NF7-wf-xuD" secondAttribute="top" constant="8" id="Ims-I1-307"/>
+                            <constraint firstItem="NF7-wf-xuD" firstAttribute="trailing" secondItem="nJ8-aw-FA0" secondAttribute="trailing" constant="20" id="U9n-r5-fnZ"/>
+                            <constraint firstItem="Bu9-V7-DEX" firstAttribute="top" secondItem="clg-JG-Cu7" secondAttribute="bottom" constant="100" id="fWo-F2-tja"/>
+                            <constraint firstItem="Bu9-V7-DEX" firstAttribute="leading" secondItem="NF7-wf-xuD" secondAttribute="leading" constant="20" id="nX0-FJ-RLk"/>
+                            <constraint firstItem="NF7-wf-xuD" firstAttribute="trailing" secondItem="clg-JG-Cu7" secondAttribute="trailing" constant="20" id="ulb-yE-4ht"/>
+                            <constraint firstItem="NF7-wf-xuD" firstAttribute="trailing" secondItem="Bu9-V7-DEX" secondAttribute="trailing" constant="20" id="x3O-T7-znz"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="NF7-wf-xuD"/>
                     </view>
                     <navigationItem key="navigationItem" id="vQK-nk-P47"/>
+                    <connections>
+                        <outlet property="addressLabel" destination="clg-JG-Cu7" id="8vS-IH-Vlk"/>
+                        <outlet property="dateOfBirthLabel" destination="nJ8-aw-FA0" id="tqC-Te-XhV"/>
+                        <outlet property="phoneLable" destination="Bu9-V7-DEX" id="6ID-eK-XE7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="109-Ci-g3y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2935" y="1614"/>
+            <point key="canvasLocation" x="2934.7826086956525" y="1613.8392857142856"/>
         </scene>
         <!--COLORS-->
         <scene sceneID="Xcj-cw-UBo">

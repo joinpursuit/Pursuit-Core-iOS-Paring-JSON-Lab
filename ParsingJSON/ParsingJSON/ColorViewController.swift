@@ -34,7 +34,6 @@ class ColorViewController: UIViewController {
         fatalError("verify class name in identity inspector")
     }
     let color = colors[indexPath.row]
-    // TODO: add background of the cell
     
     colorVC.detailColor = color
 }
