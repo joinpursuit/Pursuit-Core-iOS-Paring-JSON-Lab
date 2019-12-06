@@ -51,21 +51,45 @@
             </objects>
             <point key="canvasLocation" x="1809" y="1440"/>
         </scene>
-        <!--View Controller-->
+        <!--Colors Detail View Controller-->
         <scene sceneID="AUd-aL-E7H">
             <objects>
-                <viewController id="xmn-th-Eg9" sceneMemberID="viewController">
+                <viewController id="xmn-th-Eg9" customClass="ColorsDetailViewController" customModule="parsing_jSON_lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UcU-RY-qtE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhM-JQ-T1T">
+                                <rect key="frame" x="171.5" y="392" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYE-km-a9H">
+                                <rect key="frame" x="171.5" y="448" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hhM-JQ-T1T" firstAttribute="centerX" secondItem="UcU-RY-qtE" secondAttribute="centerX" id="EuB-gs-h8c"/>
+                            <constraint firstItem="fYE-km-a9H" firstAttribute="centerX" secondItem="UcU-RY-qtE" secondAttribute="centerX" id="NcJ-1Z-eXv"/>
+                            <constraint firstItem="fYE-km-a9H" firstAttribute="top" secondItem="UcU-RY-qtE" secondAttribute="centerY" id="Xek-bV-89X"/>
+                            <constraint firstItem="hhM-JQ-T1T" firstAttribute="bottom" secondItem="fYE-km-a9H" secondAttribute="top" constant="-20" id="iHq-bF-2MV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="yoG-cg-uA1"/>
                     </view>
                     <navigationItem key="navigationItem" id="0zp-7I-nJT"/>
+                    <connections>
+                        <outlet property="hexLabel" destination="fYE-km-a9H" id="qef-ue-q15"/>
+                        <outlet property="rgbLabel" destination="hhM-JQ-T1T" id="i1P-Rh-agN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6io-fi-02d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2538" y="1440"/>
+            <point key="canvasLocation" x="2537.68115942029" y="1439.7321428571429"/>
         </scene>
         <!--Cities-->
         <scene sceneID="qgV-Pg-gQl">

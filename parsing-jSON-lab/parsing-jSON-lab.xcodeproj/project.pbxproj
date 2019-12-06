@@ -20,6 +20,7 @@
 		E1D693DB23997F1100BBCB0B /* ColorsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D693DA23997F1100BBCB0B /* ColorsTableViewController.swift */; };
 		E1D693DD23997F9600BBCB0B /* colors.json in Resources */ = {isa = PBXBuildFile; fileRef = E1D693DC23997F9600BBCB0B /* colors.json */; };
 		E1D693DF23997FAC00BBCB0B /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D693DE23997FAC00BBCB0B /* Color.swift */; };
+		E1D694152399F49B00BBCB0B /* ColorsDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1D694142399F49B00BBCB0B /* ColorsDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		E1D693DA23997F1100BBCB0B /* ColorsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsTableViewController.swift; sourceTree = "<group>"; };
 		E1D693DC23997F9600BBCB0B /* colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = colors.json; sourceTree = "<group>"; };
 		E1D693DE23997FAC00BBCB0B /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		E1D694142399F49B00BBCB0B /* ColorsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				E1B01166237B4A53008640AA /* CitiesTableViewController.swift */,
 				E1D693D8239979AF00BBCB0B /* CitiesDetailViewController.swift */,
 				E1D693DA23997F1100BBCB0B /* ColorsTableViewController.swift */,
+				E1D694142399F49B00BBCB0B /* ColorsDetailViewController.swift */,
 				E1B01176237B4A95008640AA /* TabBarController.swift */,
 				E1B01168237B4A53008640AA /* Main.storyboard */,
 				E1B0116B237B4A55008640AA /* Assets.xcassets */,
@@ -165,6 +168,7 @@
 				E1B0117B237B4E3D008640AA /* Weather.swift in Sources */,
 				E1B01167237B4A53008640AA /* CitiesTableViewController.swift in Sources */,
 				E1B01177237B4A95008640AA /* TabBarController.swift in Sources */,
+				E1D694152399F49B00BBCB0B /* ColorsDetailViewController.swift in Sources */,
 				E1D693D9239979AF00BBCB0B /* CitiesDetailViewController.swift in Sources */,
 				E1D693DF23997FAC00BBCB0B /* Color.swift in Sources */,
 				E1B01163237B4A53008640AA /* AppDelegate.swift in Sources */,
