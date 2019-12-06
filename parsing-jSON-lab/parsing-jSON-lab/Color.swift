@@ -38,7 +38,9 @@ extension Color {
     static func getColors(from data: Data) throws -> [Color] {
         do {
             let colors = try JSONDecoder().decode(ColorWrapper.self, from: data)
-            return []
+            return colors.colors
+        } catch {
+            throw error
         }
     }
 }

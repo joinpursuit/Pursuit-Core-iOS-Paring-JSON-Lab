@@ -10,7 +10,7 @@
         <!--Colors-->
         <scene sceneID="Ad8-yE-Gnp">
             <objects>
-                <viewController id="hC2-b8-eOJ" sceneMemberID="viewController">
+                <viewController id="hC2-b8-eOJ" customClass="ColorsTableViewController" customModule="parsing_jSON_lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="13A-BB-JyW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,6 +26,9 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="xmn-th-Eg9" kind="show" id="4ld-8X-Owz"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -40,6 +43,9 @@
                         <viewLayoutGuide key="safeArea" id="38r-Iz-e7Z"/>
                     </view>
                     <navigationItem key="navigationItem" title="Colors" id="m1t-ng-Gzw"/>
+                    <connections>
+                        <outlet property="colorTableView" destination="fjh-ZB-Wam" id="2tz-jp-52F"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="huU-SU-sNh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -55,6 +61,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="yoG-cg-uA1"/>
                     </view>
+                    <navigationItem key="navigationItem" id="0zp-7I-nJT"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6io-fi-02d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -104,7 +111,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="k0J-ZA-e4z"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Cities" largeTitleDisplayMode="always" id="LoA-dv-vhj"/>
+                    <navigationItem key="navigationItem" title="Cities" id="LoA-dv-vhj"/>
                     <connections>
                         <outlet property="tableView" destination="6l6-hx-olY" id="xxz-jS-k8x"/>
                     </connections>
@@ -122,7 +129,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zX7-AR-5EZ">
-                                <rect key="frame" x="160" y="108" width="94" height="48"/>
+                                <rect key="frame" x="160" y="160" width="94" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -177,8 +184,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="d8c-gb-hkK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 1" id="ExV-A8-FYZ"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0fW-Sf-3EM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="0fW-Sf-3EM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -196,8 +203,8 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DdN-U9-Th2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item 2" id="a55-4M-boh"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tlh-vm-rjn">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="tlh-vm-rjn">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
