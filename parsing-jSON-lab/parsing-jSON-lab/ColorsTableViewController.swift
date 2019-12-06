@@ -46,10 +46,13 @@ class ColorsTableViewController: UIViewController {
         } catch {
             fatalError("Error occurred running JSON: \(error)")
         }
-        
-        
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? ColorsDetailViewController {
+            destination.color = colors[self.colorTableView.indexPathForSelectedRow!.row]
+        }
+    }
 
     /*
     // MARK: - Navigation
